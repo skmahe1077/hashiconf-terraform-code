@@ -1,3 +1,7 @@
+resource "random_id" "suffix" {
+  byte_length = 3
+}
+
 # Fetch the default VPC
 data "aws_vpc" "default" {
   default = true
