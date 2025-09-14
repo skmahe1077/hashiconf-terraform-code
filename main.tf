@@ -61,7 +61,7 @@ resource "aws_s3_bucket" "hashiconf_bucket" {
 }
 
 resource "aws_s3_bucket_acl" "public_acl" {
-  bucket = aws_s3_bucket.bad_public.id
+  bucket = aws_s3_bucket.hashiconf-bucket.id
   acl    = "public-read"
 }
 
