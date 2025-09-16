@@ -47,7 +47,7 @@ resource "aws_instance" "hashiconf_ec2_public" {
 resource "aws_ebs_volume" "hashiconf_volume_unencrypted" {
   availability_zone = "${var.region}a"
   size              = 8
-  encrypted         = false
+  encrypted         = false # ❌ non-compliant
   tags = {
     Name = "hashiconf-volume-unencrypted"
   }
@@ -63,7 +63,7 @@ resource "aws_security_group" "hashiconf_sg_open" {
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]     
+    cidr_blocks      = ["0.0.0.0/0"]  # ❌ non-compliant
   }
 
   egress {
@@ -87,8 +87,8 @@ resource "aws_s3_bucket" "hashiconf_bucket" {
 
 resource "aws_s3_bucket_public_access_block" "hashiconf_bucket_block" {
   bucket                  = aws_s3_bucket.hashiconf_bucket.id
-  block_public_acls        = false
-  block_public_policy      = true
+  block_public_acls        = false # ❌ non-compliant
+  block_public_policy      = true 
   ignore_public_acls       = true
   restrict_public_buckets  = true
 }
