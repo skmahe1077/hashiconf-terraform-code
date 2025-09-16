@@ -3,6 +3,7 @@ This repository contains Terraform configuration that will be used in Sentinel d
 The Terraform resources here are intentionally simple and include both compliant and non-compliant configurations so Sentinel policies can be demonstrated effectively
 
 ### **Repo Structure**
+```plaintext
 hashiconf-terraform-code/
 ├─ main.tf         # Terraform AWS resources (some compliant, some non-compliant)
 ├─ variables.tf    # Region and variables
