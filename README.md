@@ -2,7 +2,7 @@
 This repository contains Terraform configuration that will be used in Sentinel demos at HashiConf.
 The Terraform resources here are intentionally simple and include both compliant and non-compliant configurations so Sentinel policies can be demonstrated effectively
 
-# Resource Compliance States
+### **Resource Compliance States**
   - **EBS volumes must be encrypted**:
     ❌ Non-compliant: EBS volume created without encryption
   - **Security Groups must not allow 0.0.0.0/0 on port 22**:
