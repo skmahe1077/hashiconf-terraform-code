@@ -2,6 +2,8 @@
 This repository contains Terraform configuration that will be used in Sentinel demos at HashiConf.
 The Terraform resources here are intentionally simple and include both compliant and non-compliant configurations so Sentinel policies can be demonstrated effectively
 
+---
+
 ### **Repo Structure**
 ```plaintext
 hashiconf-terraform-code/
@@ -11,6 +13,8 @@ hashiconf-terraform-code/
 ├─ backend.tf      # (optional) S3 backend for remote state
 └─ README.md       # This file
 ```
+
+---
 
 ### **Resource Compliance States**
   - **EBS volumes must be encrypted**:
