@@ -10,6 +10,7 @@ hashiconf-terraform-code/
 ├─ providers.tf    # AWS + random providers
 ├─ backend.tf      # (optional) S3 backend for remote state
 └─ README.md       # This file
+```
 
 ### **Resource Compliance States**
   - **EBS volumes must be encrypted**:
